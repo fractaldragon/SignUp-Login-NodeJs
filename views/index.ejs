@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+    <!-- JQuery -->
+    <script src="javascripts/libs/jquery-1.11.2.js"></script>
+    <!-- Latest compiled and minified css -->
+    <link rel="stylesheet" href="stylesheets/frameworks/bootstrap/3.3.4-dist/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="stylesheets/frameworks/bootstrap/3.3.4-dist/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="stylesheets/frameworks/bootstrap/3.3.4-dist/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+
+  <header>
+    <div class="container-fluid">
+      <div class="row" id="topPanel">
+        <div class="col-lg-4" id="logo">SID</div><div class="col-lg-8"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="row" id="banner">
+      <div class="col-xs-12">
+        <div class="jumbotron">
+          <h1>Bienvenido!</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="signIn_signUp">
+      <div class="col-sm-6 col-xs-12">
+        <form action="login" method="post">
+          <div class="form-group">
+            <label for="loginId">Correo:</label>
+            <input type="email" class="form-control" id="loginId" />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" class="form-control" id="loginPassword" />
+          </div>
+
+          <button type="submit" class="btn btn-default">Iniciar Sessión</button>
+        </form>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+
+        <form action="/" method="post">
+          <div class="form-group">
+            <label for="signUpName">Nombre:</label>
+            <input type="text" class="form-control" id="signUpName" />
+          </div>
+          <div class="form-group">
+            <label for="signUpEmail">Email</label>
+            <input type="email" class="form-control" id="signUpEmail"/>
+          </div>
+
+          <div class="form-group">
+            <label for="signUpPassword">Contraseña:</label>
+            <input type="password" class="form-control" id="signUpPassword" />
+          </div>
+
+          <div class="form-group">
+            <label for="signUpPhone">Telefono</label>
+            <input type="number" class="form-control" id="signUpPhone" />
+          </div>
+
+          <button type="submit" class="btn btn-default">Crear Cuenta</button>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="bottomPanel row">
+        <div class="col-lg-12" id="credits"><span>made by <%= maker %> </span> <a href="http://www.w3.org/html/logo/">
+            <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-semantics-storage.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Device Access, Semantics, and Offline &amp; Storage">
+          </a></div>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
