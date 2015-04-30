@@ -53,24 +53,31 @@
       </div>
       <div class="col-sm-6 col-xs-12">
 
-        <form action="/" method="post">
-          <div class="form-group">
+        <form action="/signup" method="post">
+          <div class="form-group <% if(signUpFailed){ %> has-error has-feedback  <%}%>
+          ">
+
+
             <label for="signUpName">Nombre:</label>
-            <input type="text" class="form-control" id="signUpName" />
+            <input type="text" class="form-control" name="signUpName" id="signUpName" />
+            <% if(signUpFailed){ %>  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span id="inputError2Status" class="sr-only">(error)</span>
+            <%}%>
+
           </div>
           <div class="form-group">
             <label for="signUpEmail">Email</label>
-            <input type="email" class="form-control" id="signUpEmail"/>
+            <input type="email" class="form-control" name="signUpEmail" id="signUpEmail"/>
           </div>
 
           <div class="form-group">
             <label for="signUpPassword">Contraseña:</label>
-            <input type="password" class="form-control" id="signUpPassword" />
+            <input type="password" class="form-control" name="signUpPassword" id="signUpPassword" />
           </div>
 
           <div class="form-group">
             <label for="signUpPhone">Telefono</label>
-            <input type="number" class="form-control" id="signUpPhone" />
+            <input type="number" class="form-control" name="signUpPhone" id="signUpPhone" />
           </div>
 
           <button type="submit" class="btn btn-default">Crear Cuenta</button>

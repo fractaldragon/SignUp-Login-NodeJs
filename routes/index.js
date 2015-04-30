@@ -5,7 +5,7 @@ var usersData = require('../model/user');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express', maker: 'Alejandro Arbelaez Acevedo' });
+  res.render('index', { title: 'Express',signUpFailed:false , maker: 'Alejandro Arbelaez Acevedo' });
 });
 
 router.post('/', function (req, res) {

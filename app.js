@@ -5,10 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//DATA BASE
 var db = require('./model/db');
 
+
+//ROUTES
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var logIn = require('./routes/login');
+var signUp = require('./routes/signup');
 
 var app = express();
 
@@ -19,13 +24,19 @@ app.set('view engine', 'ejs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
+
+//todo check if i can remove body parser from here and use it un the routes that need it
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//Addreses
 app.use('/', routes);
 app.use('/users', users);
+//app.use('/login', logIn);
+app.use('/signup',signUp);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
