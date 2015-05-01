@@ -5,7 +5,7 @@ var router = express.Router();
 var usersData = require('../model/user');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   usersData.userList(
       function (allusers){
         console.log(allusers);
