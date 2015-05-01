@@ -14,6 +14,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="stylesheets/frameworks/bootstrap/3.3.4-dist/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="stylesheets/base/style.css"/>
+    <link rel="stylesheet" href="stylesheets/module/logo.css"/>
+    <link rel="stylesheet" href="stylesheets/module/credits.css"/>
+
+
 
   </head>
   <body>
@@ -38,17 +43,17 @@
 
     <div class="row" id="signIn_signUp">
       <div class="col-sm-6 col-xs-12">
-        <form action="login" method="post">
+        <form action="/login" method="post">
           <div class="form-group">
             <label for="loginId">Correo:</label>
-            <input type="email" class="form-control" id="loginId" />
+            <input type="email" class="form-control" name="loginId" id="loginId" />
           </div>
           <div class="form-group">
-            <label for="loginPassword">Contraseña:</label>
-            <input type="password" class="form-control" id="loginPassword" />
+            <label for="loginPassword">Contrase&ntilde;a:</label>
+            <input type="password" class="form-control" name="loginPassword" id="loginPassword" />
           </div>
 
-          <button type="submit" class="btn btn-default">Iniciar Sessión</button>
+          <button type="submit" class="btn btn-default">Iniciar Sessi&oacute;n</button>
         </form>
       </div>
       <div class="col-sm-6 col-xs-12">
@@ -71,7 +76,7 @@
           </div>
 
           <div class="form-group">
-            <label for="signUpPassword">Contraseña:</label>
+            <label for="signUpPassword">Contrase&ntilde;a:</label>
             <input type="password" class="form-control" name="signUpPassword" id="signUpPassword" />
           </div>
 

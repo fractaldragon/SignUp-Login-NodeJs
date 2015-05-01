@@ -1,9 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+
+var usersData = require('../model/user');
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  usersData.userList(
+      function (allusers){
+        console.log(allusers);
+        res.render('userList',{title:"User List", maker:'Alejandro Arbelaez Acevedo', allUsers :allusers});
+      }
+
+  );
 });
+
 
 module.exports = router;

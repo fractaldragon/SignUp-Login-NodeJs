@@ -1,0 +1,10 @@
+#credits{
+    left: 40%;
+    padding: 20px;
+    font-size: 1em;
+}
+
+#credits  img {
+    height: 33px;
+    width: 115px;
+}

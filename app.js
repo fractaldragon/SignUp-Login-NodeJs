@@ -35,14 +35,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Addreses
 app.use('/', routes);
 app.use('/users', users);
-//app.use('/login', logIn);
+app.use('/login', logIn);
 app.use('/signup',signUp);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+
+  res.render('404',{title:"User List", maker:'Alejandro Arbelaez Acevedo'});
+  /*
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+  */
 });
 
 // error handlers

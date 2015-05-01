@@ -25,7 +25,9 @@ router.post('/', function (req, res) {
         }
         else{
             //todo take to url / and not url/signup
-            res.render('index', { title: 'Sign Up Failed!', signUpFailed:true  ,maker: 'Alejandro Arbelaez Acevedo' });
+            console.log("could not create user");
+            res.redirect('/');
+            //res.render('index', { title: 'Sign Up Failed!', signUpFailed:true  ,maker: 'Alejandro Arbelaez Acevedo' });
         }
     });
 

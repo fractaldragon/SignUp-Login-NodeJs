@@ -33,7 +33,20 @@
 <section>
     <div class="row">
         <div class="col-xs-12">
-            <h1>Bienvenido de vuelta,<%= user%>!</h1>
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+                <% for(user in allUsers) {%>
+                <tr>
+                    <td><%= allUsers[user].name %></td>
+                    <td><%= allUsers[user].email %></td>
+                    <td><%= allUsers[user].contactnumber %></td>
+                </tr>
+                <% } %>
+            </table>
         </div>
 
     </div>

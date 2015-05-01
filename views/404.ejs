@@ -14,6 +14,10 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="stylesheets/frameworks/bootstrap/3.3.4-dist/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="stylesheets/base/style.css"/>
+    <link rel="stylesheet" href="stylesheets/module/logo.css"/>
+    <link rel="stylesheet" href="stylesheets/module/credits.css"/>
+
 
 </head>
 <body>
@@ -26,18 +30,13 @@
     </div>
 </header>
 
-<section>
-    <div>404 Page Not Found.
-<p>
-        <ul>
-            <% for(user in allUsers) {%>
-            <li><%= allUsers[user].name %> <%= allUsers[user].email %></li>
-            <% } %>
-        </ul>
-</p>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12"><h1>404 Page Not Found.</h1></div>
+        </div>
     </div>
-</section>
+
 <footer>
     <div class="container-fluid">
         <div class="bottomPanel row">
